@@ -26,9 +26,14 @@ public class TestPila {
 		Pila pila=new Pila();
 		pila.add(1);
 		pila.add(2);
-		boolean result= StackEmpty(pila.TamañoPila());
-		
+		boolean result= pila.StackEmpty(pila.TamañoPila());
 		assertEquals(false,result);
-				
 	}
+		public void AddFourAndFiveStackTamIsTwo() {
+			Pila pila=new Pila();
+			pila.add(4);
+			pila.add(5);
+			int result= pila.TamañoPila();
+			assertEquals(2,result);
+		}
 }
