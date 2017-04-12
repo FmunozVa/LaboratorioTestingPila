@@ -9,7 +9,7 @@ public class TestPila {
 	@Test
 	public void StackIsEmpty() {
 		Pila pila=new Pila();
-		int result=pila.Tamaño();
+		int result=pila.TamañoPila();
 		assertEquals(0,result);
 				
 	}
@@ -17,10 +17,18 @@ public class TestPila {
 	public void AddThreeStackIsNotEmpty() {
 		Pila pila=new Pila();
 		pila.add(3);
-		int result= pila.Tamaño();
+		int result= pila.TamañoPila();
 		assertEquals(1,result);
 				
 	}
-	
-	
+		@Test
+	public void AddOneTwoStackIsNotEmpty() {
+		Pila pila=new Pila();
+		pila.add(1);
+		pila.add(2);
+		boolean result= StackEmpty(pila.TamañoPila());
+		
+		assertEquals(false,result);
+				
+	}
 }
