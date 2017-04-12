@@ -1,12 +1,18 @@
 package cl.ubb.testing;
 public class Pila {
-	private Pila pila [];
-public Pila(){
-	pila=new Pila[0];
+	private int [] pila;
+	private int tope;
+	public Pila(){
+	pila=new int[1];
+	tope=0;
 }
 public int Tamaño(){
-	int cant;
-	cant=pila.length;
-	return cant;
+return tope;
+} 
+public void add(int num){
+	pila[tope]=num;
+	tope++;
+	
+	
 }
 }
